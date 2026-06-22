@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programa semanal de predicación</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="controls" aria-label="Editor del programa">
+        <div>
+          <p class="eyebrow">Editor semanal</p>
+          <h1>Programa de predicación</h1>
+          <p>
+            Cambia la semana, el punto de encuentro y el territorio para martes
+            y sábado. El programa queda guardado en este navegador.
+          </p>
+        </div>
+
+        <div class="control-grid">
+          <label>
+            Semana inicia
+            <input id="weekStart" type="date" />
+          </label>
+          <label>
+            Capitán martes
+            <input id="tuesdayCaptain" value="Roy. Azofeifa" />
+          </label>
+          <label>
+            Punto martes
+            <input id="tuesdayMeeting" value="Rancho Alegre Damas" />
+          </label>
+          <label>
+            Territorio martes
+            <select id="tuesdayTerritory"></select>
+          </label>
+          <label>
+            Capitán sábado
+            <input id="saturdayCaptain" value="Mario. Lopez" />
+          </label>
+          <label>
+            Punto sábado
+            <input id="saturdayMeeting" value="Casetilla de la entreda a canta rana (San Rafael)" />
+          </label>
+          <label>
+            Territorio sábado
+            <select id="saturdayTerritory"></select>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="saveProgram" type="button">Guardar</button>
+          <button id="shareProgram" type="button">Copiar enlace para compartir</button>
+          <a class="public-link" href="compartir.html">Ver página pública</a>
+          <button id="printProgram" type="button">Imprimir</button>
+          <button id="resetProgram" type="button">Limpiar cambios</button>
+        </div>
+      </section>
+
+      <section class="sheet-wrap" aria-label="Vista del programa">
+        <table class="program-sheet">
+          <thead>
+            <tr>
+              <th class="congregation" colspan="5">Costanera-Paquita, Punt. (5314)</th>
+            </tr>
+            <tr>
+              <th class="title" colspan="5">PROGRAMA SEMANAL DE PREDICACIÓN COSTANERA PAQUITA</th>
+            </tr>
+            <tr>
+              <th class="theme" colspan="5">1 Tim 2:7 "Para dar testimonio fui nombrado predicador"</th>
+            </tr>
+            <tr>
+              <th class="week" id="weekTitle" colspan="5">Del 22 al 28 de Junio 2026</th>
+            </tr>
+            <tr class="headers">
+              <th>DÍA</th>
+              <th>CAPITÁN</th>
+              <th>PUNTO DE ENCUENTRO</th>
+              <th>TERRITORIO</th>
+              <th>HORA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="monday">
+              <td>LUNES</td>
+              <td>Roy. Azofeifa</td>
+              <td>Zoom</td>
+              <td>Predicación por Zoom</td>
+              <td>6:00 pm</td>
+            </tr>
+            <tr class="editable-row tuesday">
+              <td>MARTES</td>
+              <td id="previewTuesdayCaptain"></td>
+              <td id="previewTuesdayMeeting"></td>
+              <td id="previewTuesdayTerritory"></td>
+              <td>9:30 am</td>
+            </tr>
+            <tr class="group-row wednesday">
+              <td>MIÉRCOLES</td>
+              <td colspan="4">Predicación por grupo</td>
+            </tr>
+            <tr class="group-row thursday">
+              <td>JUEVES</td>
+              <td colspan="4">Predicación por grupo</td>
+            </tr>
+            <tr class="group-row friday">
+              <td>VIERNES</td>
+              <td colspan="4">Predicación por grupo</td>
+            </tr>
+            <tr class="editable-row saturday">
+              <td>SÁBADO</td>
+              <td id="previewSaturdayCaptain"></td>
+              <td id="previewSaturdayMeeting"></td>
+              <td id="previewSaturdayTerritory"></td>
+              <td>9:30 am</td>
+            </tr>
+            <tr class="footer-space">
+              <td colspan="5"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
